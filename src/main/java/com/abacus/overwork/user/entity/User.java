@@ -3,6 +3,7 @@ package com.abacus.overwork.user.entity;
 import com.abacus.overwork.common.audit.Audit;
 import com.abacus.overwork.user.dto.Rank;
 import com.abacus.overwork.user.dto.Role;
+import com.abacus.overwork.work.entity.Image;
 import com.abacus.overwork.work.entity.Work;
 import jakarta.persistence.*;
 
@@ -47,4 +48,7 @@ public class User extends Audit {
 
     @OneToMany(mappedBy = "user")
     private List<Work> works;
+
+    @OneToMany(mappedBy = "user")
+    private List<Image> images;
 }

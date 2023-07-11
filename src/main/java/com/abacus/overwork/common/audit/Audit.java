@@ -2,30 +2,25 @@ package com.abacus.overwork.common.audit;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.EntityListeners;
+import jakarta.persistence.MappedSuperclass;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.annotation.LastModifiedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.time.LocalDateTime;
 
-@EntityListeners({AuditListener.class})
-public class Audit {
-    @Getter
-    @Setter
-    @Column(name = "DATA_INPT_ID", nullable = false, updatable = false)
-    protected String dataInptId;
+@Getter
+@MappedSuperclass
+@EntityListeners(AuditingEntityListener.class)
+public abstract class Audit {
 
-    @Getter
-    @Setter
-    @Column(name = "DATA_INPT_DTTM", nullable = false, updatable = false)
-    protected LocalDateTime dataInptDttm;
+    @CreatedDate
+    @Column(name = "DATA_CREATED_DTTM", nullable = false, updatable = false)
+    protected LocalDateTime dataCreatedDttm;
 
-    @Getter
-    @Setter
-    @Column(name = "DATA_UPDT_ID", nullable = false)
-    protected String dataUpdtId;
-
-    @Getter
-    @Setter
-    @Column(name = "DATA_UPDT_DTTM", nullable = false)
-    protected LocalDateTime dataUpdtDttm;
+    @LastModifiedDate
+    @Column(name = "DATA_UPDATED_DTTM", nullable = false)
+    protected LocalDateTime dataUpdatedDttm;
 }

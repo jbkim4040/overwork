@@ -1,6 +1,7 @@
 package com.abacus.overwork.work.entity;
 
 import com.abacus.overwork.common.audit.Audit;
+import com.abacus.overwork.user.entity.User;
 import jakarta.persistence.*;
 
 @Entity
@@ -17,6 +18,10 @@ public class Image extends Audit {
     @Column(name = "IMAGE_EXT", nullable = false, length = 10)
     private String extension;
 
-    @OneToOne(mappedBy = "image")
-    private Work work;
+    @Column(name = "IMAGE_PATH", nullable = false, length = 10)
+    private String path;
+
+    @ManyToOne
+    @JoinColumn(name = "USER_ID")
+    private User user;
 }
