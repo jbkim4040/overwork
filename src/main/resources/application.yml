@@ -1,0 +1,15 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://211.47.74.38:3306/dbworkm2023?serverTimezone=UTC&characterEncoding=UTF-8
+    username: workm2023
+    password: workm!2023
+  jpa:
+    show-sql: true
+    hibernate:
+      format_sql: true
+      ddl-auto: create-drop
