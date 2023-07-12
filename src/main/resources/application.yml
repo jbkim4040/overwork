@@ -1,4 +1,8 @@
 spring:
+  security:
+    user:
+      name: 'admin'
+      password: 'admin'
   mvc:
     view:
       prefix: /WEB-INF/views/
