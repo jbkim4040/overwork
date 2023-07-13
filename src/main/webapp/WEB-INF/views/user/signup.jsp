@@ -8,9 +8,9 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>인덱스</title>
+    <title>회원가입</title>
 </head>
 <body>
-<h1>여긴 인덱스화면</h1>
+    <h1>여긴 회원가입</h1>
 </body>
 </html>

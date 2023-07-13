@@ -13,11 +13,11 @@ public class HomeController {
 
     @RequestMapping("/login")
     public String login () {
-        return "login";
+        return "user/login";
     }
 
     @RequestMapping("/signup")
     public String signup () {
-        return "signup";
+        return "user/signup";
     }
 }

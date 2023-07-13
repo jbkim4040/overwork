@@ -5,8 +5,8 @@ import com.abacus.overwork.user.dto.Rank;
 import com.abacus.overwork.user.dto.Role;
 import com.abacus.overwork.work.entity.Image;
 import com.abacus.overwork.work.entity.Work;
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.util.List;
 
 @Entity

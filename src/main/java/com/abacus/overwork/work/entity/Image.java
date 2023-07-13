@@ -2,7 +2,8 @@ package com.abacus.overwork.work.entity;
 
 import com.abacus.overwork.common.audit.Audit;
 import com.abacus.overwork.user.entity.User;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "tb_image_m")
