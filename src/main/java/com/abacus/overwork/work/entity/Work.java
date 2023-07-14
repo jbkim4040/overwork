@@ -28,14 +28,15 @@ public class Work extends Audit {
     @Column(name = "WORK_DINNER_YN", length = 1)
     private String dinnerYn;
 
-    @Column(name = "WORK_TAXI_YN", length = 1)
+    @Column(name = "WORK_TAXI_Yn", length = 1)
     private String taxiYn;
 
-    @Column(name = "WORK_TAXI_FEE", length = 6)
+    @Column(name = "WORK_TAXI_AMT", length = 6)
     private String taxiFee;
 
-    @Column(name = "IMAGE_ID")
-    private String image;
+    @OneToOne
+    @JoinColumn(name = "IMAGE_ID")
+    private Image image;
 
     @ManyToOne
     @JoinColumn(name = "USER_ID")

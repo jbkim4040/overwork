@@ -48,7 +48,4 @@ public class User extends Audit {
 
     @OneToMany(mappedBy = "user")
     private List<Work> works;
-
-    @OneToMany(mappedBy = "user")
-    private List<Image> images;
 }

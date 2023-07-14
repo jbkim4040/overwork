@@ -19,10 +19,16 @@ public class Image extends Audit {
     @Column(name = "IMAGE_EXT", nullable = false, length = 10)
     private String extension;
 
+    // 암호화 필요
     @Column(name = "IMAGE_PATH", nullable = false, length = 10)
     private String path;
 
-    @ManyToOne
-    @JoinColumn(name = "USER_ID")
-    private User user;
+    @Column(name = "IMAGE_UPLOAD_DTTM", nullable = false, length = 8)
+    private String uploadDttm;
+
+    @Column(name = "IMAGE_DELETE_YN", nullable = false, length = 1)
+    private String deleteYn;
+
+    @OneToOne(mappedBy = "image")
+    private Work work;
 }
