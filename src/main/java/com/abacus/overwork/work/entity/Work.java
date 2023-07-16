@@ -34,11 +34,11 @@ public class Work extends Audit {
     @Column(name = "WORK_TAXI_AMT", length = 6)
     private String taxiFee;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "IMAGE_ID")
     private Image image;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_ID")
     private User user;
 }

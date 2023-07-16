@@ -1,11 +1,5 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: gimjeongbin
-  Date: 7/10/23
-  Time: 11:44 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page language="java" contentType="text/html; charset-UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Title</title>
@@ -534,15 +528,16 @@
             </ul>
         </div>
         <div ng-app ng-init="checked = false">
-            <form class="form-signin" action="" method="post" name="form">
-                <label for="username">Username</label>
-                <input class="form-styling" type="text" name="username" id="username" placeholder="" />
-                <label for="password">Password</label>
-                <input class="form-styling" type="text" name="password" id="password" placeholder="" />
+            <form class="form-signin" action="/user/login" method="post" name="form">
+                <label for="id">아이디</label>
+                <input class="form-styling" type="text" name="id" id="id" placeholder="아이디" />
+                <label for="password">비밀번호</label>
+                <input class="form-styling" type="password" name="password" id="password" placeholder="비밀번호" />
                 <input type="checkbox" id="checkbox" />
                 <label for="checkbox"><span class="ui"></span>Keep me signed in</label>
                 <div class="btn-animate">
-                    <a class="btn-signin">Sign in</a>
+                    <button type="submit">로그인</button>
+<%--                    <a class="btn-signin">로그인</a>--%>
                 </div>
             </form>
 
@@ -555,7 +550,7 @@
                 <input class="form-styling" type="text" name="password" placeholder="" />
                 <label for="confirmpassword">Confirm password</label>
                 <input class="form-styling" type="text" name="confirmpassword" id="confirmpassword" placeholder="" />
-                <a ng-click="checked = !checked" class="btn-signup">Sign Up</a>
+                <a ng-click="checked = !checked" class="btn-signup">회웥가입</a>
             </form>
 
             <div class="success">
@@ -571,7 +566,7 @@
         </div>
 
         <div class="forgot">
-            <a href="#">Forgot your password?</a>
+            <a href="#">비밀번호 찾기</a>
         </div>
 
         <div>

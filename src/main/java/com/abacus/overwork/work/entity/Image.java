@@ -29,6 +29,6 @@ public class Image extends Audit {
     @Column(name = "IMAGE_DELETE_YN", nullable = false, length = 1)
     private String deleteYn;
 
-    @OneToOne(mappedBy = "image")
+    @OneToOne(mappedBy = "image", fetch = FetchType.LAZY)
     private Work work;
 }

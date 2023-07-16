@@ -9,5 +9,7 @@ import java.util.List;
 @Repository
 public interface WorkRepository extends JpaRepository<Work, String> {
 
-    List<Work> findAllByDateOrderByUser(String date);
+    List<Work> findAllByDate(String date);
+
+//    Work findAllByUserIdOrderByUser(String userId, String date);
 }

@@ -29,13 +29,17 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-mail'
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.6.7'
+//    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-security', version: '2.6.7'
 
     implementation group: 'org.glassfish.web', name: 'jakarta.servlet.jsp.jstl', version: '2.0.0'
     implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
     compileOnly 'org.projectlombok:lombok:1.18.20'
     annotationProcessor 'org.projectlombok:lombok:1.18.20'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+    /* 암호화 관련 라이브러리 */
+    // Scrypt
+    implementation group: 'org.jasypt', name: 'jasypt-spring31', version: '1.9.3'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }

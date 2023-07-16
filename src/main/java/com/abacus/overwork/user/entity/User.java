@@ -5,11 +5,19 @@ import com.abacus.overwork.user.dto.Rank;
 import com.abacus.overwork.user.dto.Role;
 import com.abacus.overwork.work.entity.Image;
 import com.abacus.overwork.work.entity.Work;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@Getter
+@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 @Table(name = "tb_user_m")
 public class User extends Audit {
 
@@ -46,6 +54,6 @@ public class User extends Audit {
     @Column(name = "USER_KEY", nullable = false, length = 100)
     private String key;
 
-    @OneToMany(mappedBy = "user")
+    @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     private List<Work> works;
 }
